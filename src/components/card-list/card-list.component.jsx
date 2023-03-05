@@ -1,7 +1,20 @@
-import { Component } from "react";
+//import { Component } from "react";
 import './card-list.styles.css';
 import Card from "../card/card.component";
 
+/**  using functional component */
+const CardList = ({monsters}) => (
+
+    <div className='card-list'>
+        {
+            monsters.map((monster) => {
+            return <Card  monster={monster}/>
+            })
+        }
+    </div>   
+);
+
+/**  using class component
 class CardList extends Component{
 
     render(){
@@ -17,5 +30,5 @@ class CardList extends Component{
         );
     }
 }
-
+*/
 export default CardList;
